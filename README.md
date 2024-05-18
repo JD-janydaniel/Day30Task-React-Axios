@@ -26,6 +26,8 @@ Mock API URL : https://jsonplaceholder.typicode.com/users
   <li>In the CRUD App Home page shows the details of the mokAPI in the table</li>
   <li>In the Users page it displays the details of the user in the table in this page we can Edit and Delete the user</li>
   <li>If you click the Edit button in the Users page it will navigate you to the Edit page in this page you can edit the details of the user and update it</li>
+  <li>And you can delete the details of the user</li>
+  <li>You can also create the details of the user in create page</li>
 </ul>
 
 ## Deployment Link
