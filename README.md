@@ -21,6 +21,13 @@ Mock API URL : https://jsonplaceholder.typicode.com/users
   <li>The code should be submitted in a Git repository, with a clear commit history that demonstrates the development process.</li>
 </ol>
 
+## How to run the App
+<ul>
+  <li>In the CRUD App Home page shows the details of the mokAPI in the table</li>
+  <li>In the Users page it displays the details of the user in the table in this page we can Edit and Delete the user</li>
+  <li>If you click the Edit button in the Users page it will navigate you to the Edit page in this page you can edit the details of the user and update it</li>
+</ul>
+
 ## Deployment Link
 
 
