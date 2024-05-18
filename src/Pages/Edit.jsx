@@ -60,7 +60,7 @@ const Edit = ({ id }) => {
       .then((res) => console.log(res.data))
       .catch((error) => console.log(error));
 
-    navigate("/products");
+    navigate("/users");
   };
   return (
     <div className="text-center">

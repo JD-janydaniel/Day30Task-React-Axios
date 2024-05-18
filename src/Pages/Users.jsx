@@ -2,8 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Products = ({ setId }) => {
-  const [user, setUser] = useState([]);
+const Users = ({ setId }) => {
+    const [user, setUser] = useState([]);
   const [deleteData, setDeleteData] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
@@ -25,8 +25,8 @@ const Products = ({ setId }) => {
       .then((res) => setDeleteData(res.data))
       .catch((error) => console.log(error));
   };
-  return (
-    <div className="p-1 table-responsive">
+    return (
+        <div className="p-1 table-responsive">
       <table className="table table-hover table-danger table-bordered ">
         <thead className="fs-3 text-center">
           <tr>
@@ -103,7 +103,7 @@ const Products = ({ setId }) => {
         </button>
       </div>
     </div>
-  );
+    );
 };
 
-export default Products;
+export default Users;
