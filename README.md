@@ -30,6 +30,9 @@ Mock API URL : https://jsonplaceholder.typicode.com/users
   <li>You can also create the details of the user in create page</li>
 </ul>
 
+## MokAPI LINK
+https://6646051751e227f23aad6ba3.mockapi.io/api/user
 ## Deployment Link
+https://cosmic-kelpie-b780c6.netlify.app/
 
 
