@@ -26,7 +26,7 @@ const Create = () => {
     phone: "",
     website: "",
     company: {
-      name: "",
+      companyname: "",
       catchPhrase: "",
       bs: "",
     },
