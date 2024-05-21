@@ -2,10 +2,13 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const Home = () => {
+  //useState hook is use for state management
   const [user, setUser] = useState([]);
+  //useEffect hook is use to render the api calls initialy
   useEffect(() => {
     fetchData();
   }, []);
+  //this function is use to get data from the api
   const fetchData = async () => {
     await axios
       .get("https://6646051751e227f23aad6ba3.mockapi.io/api/user")

@@ -3,11 +3,14 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Create = () => {
+  //useNavigate hook for navigation
   const navigate = useNavigate();
+  //useRef hook for focus the dom element
   const myRef = useRef();
   useEffect(() => {
     myRef.current.focus();
   }, []);
+  //useState hook for updating the state
   const [createData, setCreateData] = useState({
     id: "",
     name: "",
@@ -31,6 +34,7 @@ const Create = () => {
       bs: "",
     },
   });
+  //handleChange function to handle the onChange event
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCreateData((preData) => ({
@@ -44,7 +48,7 @@ const Create = () => {
       company: { ...preData.company, [name]: value },
     }));
   };
-
+//handleSubmit function to handle the onSubmit event
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios

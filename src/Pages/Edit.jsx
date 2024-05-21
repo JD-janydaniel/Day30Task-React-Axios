@@ -3,7 +3,9 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Edit = ({ id }) => {
+  //useNavigate hook for navigation
   const navigate = useNavigate();
+  //useState hook for update the state
   const [editData, setEditData] = useState({
     id: "",
     name: "",
@@ -27,15 +29,18 @@ const Edit = ({ id }) => {
       bs: "",
     },
   });
+  //useEffect hook for rendre the api calls initialy
   useEffect(() => {
     fetchData();
   }, []);
+  //this function use to get data from the api
   const fetchData = async () => {
     await axios
       .get(`https://6646051751e227f23aad6ba3.mockapi.io/api/user/${id}`)
       .then((res) => setEditData(res.data))
       .catch((error) => console.log(error));
   };
+  //handleChange function is use to handle the onChange event
   const handleChange = (e) => {
     const { name, value } = e.target;
     setEditData((preData) => ({
@@ -49,7 +54,7 @@ const Edit = ({ id }) => {
       company: { ...preData.company, [name]: value },
     }));
   };
-
+//handleSubmit function is use to handle the onSubmit event
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios

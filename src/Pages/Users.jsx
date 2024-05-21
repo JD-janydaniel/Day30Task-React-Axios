@@ -3,22 +3,27 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Users = ({ setId }) => {
+  //useState hook is use to update the state
     const [user, setUser] = useState([]);
   const [deleteData, setDeleteData] = useState([]);
   const navigate = useNavigate();
+  //useEffect hook is use to rendre the api calls initialy
   useEffect(() => {
     fetchData();
   }, [deleteData]);
+  //this function is use to get the data from the api
   const fetchData = async () => {
     await axios
       .get("https://6646051751e227f23aad6ba3.mockapi.io/api/user")
       .then((res) => setUser(res.data))
       .catch((error) => console.log(error));
   };
+  //this function is use to navigate to edit page
   const handleEdit = (id) => {
     setId(id);
     navigate(`/edit/${id}`);
   };
+  //this function is to delete the data from the api and update it
   const handleDelete = async (id) => {
     await axios
       .delete(`https://6646051751e227f23aad6ba3.mockapi.io/api/user/${id}`)

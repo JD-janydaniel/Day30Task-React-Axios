@@ -11,6 +11,7 @@ const App = () => {
   const [id, setId] = useState(0);
   return (
     <div>
+      {/* BrowserRouter,Routes,Route is use to navigation */}
       <BrowserRouter>
         <div>
           <Navbar />
